@@ -54,12 +54,12 @@ if __name__ == '__main__':
         
         # capture ten samples for each model
         ####################################
-        for i in range(17):
+        for i in range(200):
             
             # make five attempts to get a valid point cloud then give up
             sample_was_good = False
             try_count = 0
-            while not sample_was_good and try_count < 5:
+            while not sample_was_good and try_count < 20:
                 sample_cloud = capture_sample()
                 sample_cloud_arr = ros_to_pcl(sample_cloud).to_array()
 
